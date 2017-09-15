@@ -180,13 +180,12 @@ def main():
 
     yolo = YOLONet()
     pascal = pascal_voc('train')
-    print(pascal)
 
-    # solver = Solver(yolo, pascal)
-    #
-    # print('Start training ...')
-    # solver.train()
-    # print('Done training.')
+    solver = Solver(yolo, pascal)
+
+    print('Start training ...')
+    solver.train()
+    print('Done training.')
 
 if __name__ == '__main__':
 
